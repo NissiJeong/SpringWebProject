@@ -13,6 +13,8 @@ import org.springframework.data.domain.Page;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+// @SpringBootTest 어노테이션이 있으면 Test 코드에서 스프링의 기능을 사용할 수 있다.
+// 대표적으로 @Autowired 와 같이 의존성을 주입할 수 있다.
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT) // 서버의 PORT 를 랜덤으로 설정합니다.
 @TestInstance(TestInstance.Lifecycle.PER_CLASS) // 테스트 인스턴스의 생성 단위를 클래스로 변경합니다.
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
