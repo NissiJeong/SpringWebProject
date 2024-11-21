@@ -19,10 +19,11 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.BDDMockito.given;
 
+// 해당 테스트 코드에는 @SpringBootTest 어노테이션이 없어서 의존성 주입과 같은 스프링의 기능을 사용할 수 없다.
 @ExtendWith(MockitoExtension.class) // @Mock 사용을 위해 설정합니다.
 class ProductServiceTest {
 
-    @Mock
+    @Mock// @Mock 어노테이션을 통해 ProductRepository 목 객체를 얻어옴.
     ProductRepository productRepository;
 
     @Mock
